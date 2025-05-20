@@ -4,24 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    void Start()
-    {
-        if (target == null)
-        {
-            GameObject baseObj = GameObject.FindWithTag("Base");
-            if (baseObj != null)
-            {
-                target = baseObj.transform;
-            }
-            else
-            {
-                Debug.LogError("基地（Baseタグ付きオブジェクト）が見つかりません！");
-            }
-        }
-    }
-
     public Transform kyoten;
-    public float moveSpeed = 2f;
+    public float moveSpeed = 30f;
     public int damage = 10;
     public int maxHp = 30;
     private int currentHp;
@@ -66,6 +50,21 @@ public class Enemy : MonoBehaviour
         //{
         //    gameObject.AddComponent<LineRenderer>();
         //}
+
+        // kyoten を自動取得（Tagが"Kyoten"のオブジェクトを探す）
+        if (kyoten == null)
+        {
+            GameObject targetObj = GameObject.FindWithTag("kyoten");
+            if (targetObj != null)
+            {
+                kyoten = targetObj.transform;
+            }
+            else
+            {
+                Debug.LogError("Kyoten オブジェクトが見つかりません。Tagが設定されていますか？");
+            }
+        }
+
     }
 
     void Update()

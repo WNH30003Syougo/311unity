@@ -44,7 +44,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;   // ¶¬‚·‚é“G‚ÌƒvƒŒƒnƒu
-    public float spawnInterval = 3f; // “G‚ğ¶¬‚·‚éŠÔŠui•bj
+    public float spawnInterval = 5f; // “G‚ğ¶¬‚·‚éŠÔŠui•bj
 
     private float timer;
 

@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 429284738}
   m_Layer: 0
   m_Name: kyoten
-  m_TagString: Base
+  m_TagString: kyoten
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,9 +374,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429284731}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 105.8, z: -0.20459}
-  m_LocalScale: {x: 38.782867, y: 38.782867, z: 38.782867}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13, y: 105.8, z: -0.20458984}
+  m_LocalScale: {x: 66.75695, y: 66.75695, z: 66.75695}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29522a2ebc0605a4cb75f9ff55158ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 30
+  maxHP: 100
 --- !u!54 &429284738
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7944521256661813730, guid: 0c196126b98bd624c81df87ef6f44a9d, type: 3}
-  spawnInterval: 3
+  spawnInterval: 5
 --- !u!65 &604774286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -565,8 +565,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604774284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -72, y: 259, z: -197.4}
-  m_LocalScale: {x: 6.9282, y: 6.9282, z: 6.9282}
+  m_LocalPosition: {x: -142, y: 99, z: 266}
+  m_LocalScale: {x: 52.56566, y: 23.793787, z: 52.56566}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kyoten: {fileID: 429284735}
-  moveSpeed: 12
+  moveSpeed: 15
   damage: 10
   maxHp: 30
 --- !u!54 &621111037
@@ -862,6 +862,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -927,14 +928,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 104.5, z: -206}
+  m_LocalRotation: {x: 0.16206804, y: -0, z: -0, w: 0.98677963}
+  m_LocalPosition: {x: -12, y: 183.4, z: -206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.654, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +954,22 @@ MonoBehaviour:
   ySpeed: 2500
   yMinLimit: -360
   yMaxLimit: 360
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90b7b16f4a226840a41a6473f51883e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 429284735}
+  zoomSpeed: 150
+  minDistance: 5
+  maxDistance: 500
 --- !u!1 &1034017817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,8 +1524,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7944521256661813739, guid: 0c196126b98bd624c81df87ef6f44a9d, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944521256661813739, guid: 0c196126b98bd624c81df87ef6f44a9d, type: 3}
       propertyPath: kyoten
       value: 
       objectReference: {fileID: 429284735}
+    - target: {fileID: 7944521256661813739, guid: 0c196126b98bd624c81df87ef6f44a9d, type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c196126b98bd624c81df87ef6f44a9d, type: 3}

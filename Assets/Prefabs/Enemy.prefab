@@ -129,6 +129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kyoten: {fileID: 0}
-  moveSpeed: 7
+  moveSpeed: 12
   damage: 30
   maxHp: 30
